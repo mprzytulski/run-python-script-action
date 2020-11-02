@@ -18,7 +18,9 @@ async function run() {
     exec.exec('python', [filename])
 }
 
-run();
+run().catch((e) => {
+    console.error(e.message)
+});
 
 
 /***/ }),
